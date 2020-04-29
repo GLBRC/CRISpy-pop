@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRISpy-pop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="wrapper">
+        <nav class='navbar navbar-expand-lg navbar-dark top-nav-top' role="navigation" style="background-color: #302d2d">
+          <%= render 'layouts/header' %>
+        </nav>
+      <div class="wrapper">
+        <div id="page-wrapper" style="min-height: 850px; margin-top: 20px; margin-left: 75px; padding-top: 5px; width: 100%;">
+
+          <div class='container-fluid'>
+            <% if content_for?(:pagetitle) || content_for?(:item_bar) %>
+              <div class='page-header'>
+                <div class='row'>
+                  <div class='col-md-6'>
+                    <h2><%= yield(:pagetitle) if content_for?(:pagetitle) %></h2>
+                  </div>
+                  <div class='col-md-6'>
+                    <div class='item-bar'><%= yield :item_bar if content_for?(:item_bar) %></div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+            <br>
+            <%= render 'layouts/messages' %>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'layouts/footer' if request.fullpath == '/' %>
+  </body>
+</html>

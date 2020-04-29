@@ -1,0 +1,8 @@
+<%= bootstrap_form_for(@role, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-8', id: 'genetic-resource-form') do |f| %>
+  <%= f.error_summary %>
+  <%= f.text_field :name, required: true %>
+  <br>
+  <%= f.form_group do %>
+    <%= f.submit %>
+  <% end %>
+<% end %>

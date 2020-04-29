@@ -1,0 +1,73 @@
+7/10/2017 Mike Place
+
+The original Y22-3 genome sequence was downloaded from NCBI.
+I changed the chromosome names from the GenBank ID to roman numerals.
+
+I also changed the CDS, attributes information in the Y22-3 GFF, changed
+ID= to Parent=, this is the way it is in the SGD S288C reference and works
+with GffUtils python module.
+
+The GffUtils Y22-3 database was created using the following command:
+
+   import gffutils
+   gffutils.create_db('GLBRCY22-3.gff', dbfn='y22-3.db')
+
+
+
+7/3/2018 Mike Place
+
+Zymononas mobilis gff file, official GenBank gff from Jessica Vera.
+The genome and plasmid GenBank name was converted to ZM4, pZM32,pZM33,pZM36,pZM39.
+
+example:
+ with open('pZM36.gff','r') as gff, open('out.gff','w') as out:
+    for line in gff:
+        dat = line.split('\t')
+        if line.startswith('#'):
+            out.write(line)
+        elif dat[2] == 'CDS':
+            continue
+        else:
+            dat[0] = 'pZM36'
+            out.write('\t'.join(dat))
+
+All the gff files were then concatenated together into a single GFF file, ZM4.gff
+
+The plasmid region ID's had to be changed as they were duplicates (all id0) I changed
+them to id132, id133,id136,id139.
+
+The zymo gff had some issues, I removed all none gene rows:
+
+with open('ZYMOMONAS.gff', 'r') as f, open('test.out.gff', 'w') as out:
+     for ln in f:
+        if ln.startswith('#'):
+             out.write(ln)
+             continue
+         r = ln.rstrip().split('\t')
+         if r[2] == 'gene' or r[2] == 'region':
+            info=r[8].split(';')[-1].split('=')
+            dat = r[8].split(';')
+            if not dat[0].startswith('ID=ZMO'):
+                dat[0] = dat[0] + '_' + info[1]
+                r[8] = ';'.join(dat)
+                outline = '\t'.join(r)
+                out.write(outline)
+                out.write('\n')
+
+
+create gffutils database in python:
+    import gfftutils
+    gffutils.create_db('ZYMOMONAS.gff', dbfn='ZYMOMONAS.db')
+
+Get Zymo bed file:
+
+ with open('ZYMOMONAS.gff', 'r') as f, open('test.out.gff', 'w') as out:
+    for ln in f:
+        if ln.startswith('#'):
+            continue
+        r = ln.split('\t')
+        if r[2] == 'gene':
+            info=r[8].split(';')[1].split('=')
+            out.write( '%s\t%s\t%s\t%s\t%s\n' %( r[0],r[3],r[4],r[6],info[1]))
+
+

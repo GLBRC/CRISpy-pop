@@ -1,0 +1,6 @@
+Command used to generate files
+
+python lib/python_scripts/crispy.py -g hog1 -n W303 -c
+
+
+

@@ -1,0 +1,17 @@
+2020-04-28 12:08:38,334 - /Users/michaelgraham/apps/crispy_public/lib/python_scripts/crispy.py - INFO - crispy.py running
+2020-04-28 12:08:38,334 - /Users/michaelgraham/apps/crispy_public/lib/python_scripts/crispy.py - INFO - 
+  crispy.py job information:
+	Gene (Systematic Name): sg
+	Gene (Standard Name)  : sg
+	Chromosome            : N/A
+	Start-Stop Positions  : 0-0
+	Strand                : NA
+	PAM sequence          : NGG
+	PAM Orientation       : 3
+	Spacer Length         : 20
+	Strains               : None
+	Target                : gene
+	Project               : GLBRC
+
+2020-04-28 12:08:38,579 - /Users/michaelgraham/apps/crispy_public/lib/python_scripts/crispy.py - INFO - findOffSiteTarget cas-offinder /Users/michaelgraham/apps/crispy_public/lib/python_scripts/tmp/cas-in-10.txt C /Users/michaelgraham/apps/crispy_public/lib/python_scripts/tmp/sg-10-offinder.txt
+2020-04-28 12:08:38,580 - /Users/michaelgraham/apps/crispy_public/lib/python_scripts/crispy.py - INFO - Program Complete!

@@ -1,0 +1,102 @@
+{
+  "application.css": "/packs-test/css/application-d2ba9007.css",
+  "application.css.map": "/packs-test/css/application-d2ba9007.css.map",
+  "application.js": "/packs-test/js/application-e1c9194b88e826b07841.js",
+  "application.js.map": "/packs-test/js/application-e1c9194b88e826b07841.js.map",
+  "entrypoints": {
+    "application": {
+      "css": [
+        "/packs-test/css/application-d2ba9007.css"
+      ],
+      "js": [
+        "/packs-test/js/application-e1c9194b88e826b07841.js"
+      ],
+      "css.map": [
+        "/packs-test/css/application-d2ba9007.css.map"
+      ],
+      "js.map": [
+        "/packs-test/js/application-e1c9194b88e826b07841.js.map"
+      ]
+    },
+    "images/CRISPY": {
+      "js": [
+        "/packs-test/js/images/CRISPY-7101652a350a0768df07.js"
+      ],
+      "js.map": [
+        "/packs-test/js/images/CRISPY-7101652a350a0768df07.js.map"
+      ]
+    },
+    "images/ecorp": {
+      "js": [
+        "/packs-test/js/images/ecorp-3a8089689d578a46105c.js"
+      ],
+      "js.map": [
+        "/packs-test/js/images/ecorp-3a8089689d578a46105c.js.map"
+      ]
+    },
+    "images/GLBRC_165strains": {
+      "js": [
+        "/packs-test/js/images/GLBRC_165strains-57e70737a6954939dc9d.js"
+      ],
+      "js.map": [
+        "/packs-test/js/images/GLBRC_165strains-57e70737a6954939dc9d.js.map"
+      ]
+    },
+    "images/Joseph Schacherer_Fig1_HTML": {
+      "js": [
+        "/packs-test/js/images/Joseph%20Schacherer_Fig1_HTML-4a677543c005bb1dc2f5.js"
+      ],
+      "js.map": [
+        "/packs-test/js/images/Joseph%20Schacherer_Fig1_HTML-4a677543c005bb1dc2f5.js.map"
+      ]
+    },
+    "offsite_searches": {
+      "js": [
+        "/packs-test/js/offsite_searches-191fc9f7e7a2fadd67d2.js"
+      ],
+      "js.map": [
+        "/packs-test/js/offsite_searches-191fc9f7e7a2fadd67d2.js.map"
+      ]
+    },
+    "server_rendering": {
+      "css": [
+        "/packs-test/css/server_rendering-22ac5c90.css"
+      ],
+      "js": [
+        "/packs-test/js/server_rendering-9a1ca531a7d7965d8d0b.js"
+      ],
+      "css.map": [
+        "/packs-test/css/server_rendering-22ac5c90.css.map"
+      ],
+      "js.map": [
+        "/packs-test/js/server_rendering-9a1ca531a7d7965d8d0b.js.map"
+      ]
+    }
+  },
+  "images/CRISPY.js": "/packs-test/js/images/CRISPY-7101652a350a0768df07.js",
+  "images/CRISPY.js.map": "/packs-test/js/images/CRISPY-7101652a350a0768df07.js.map",
+  "images/GLBRC_165strains.js": "/packs-test/js/images/GLBRC_165strains-57e70737a6954939dc9d.js",
+  "images/GLBRC_165strains.js.map": "/packs-test/js/images/GLBRC_165strains-57e70737a6954939dc9d.js.map",
+  "images/Joseph Schacherer_Fig1_HTML.js": "/packs-test/js/images/Joseph%20Schacherer_Fig1_HTML-4a677543c005bb1dc2f5.js",
+  "images/Joseph Schacherer_Fig1_HTML.js.map": "/packs-test/js/images/Joseph%20Schacherer_Fig1_HTML-4a677543c005bb1dc2f5.js.map",
+  "images/ecorp.js": "/packs-test/js/images/ecorp-3a8089689d578a46105c.js",
+  "images/ecorp.js.map": "/packs-test/js/images/ecorp-3a8089689d578a46105c.js.map",
+  "media/images/CRISPY.svg": "/packs-test/media/images/CRISPY-fa1ea6793d37fabf2d8c68baea69739d.svg",
+  "media/images/GLBRC_165strains.jpg": "/packs-test/media/images/GLBRC_165strains-680a5a789aa2ca0992571a4f169327c7.jpg",
+  "media/images/Joseph Schacherer_Fig1_HTML.jpg": "/packs-test/media/images/Joseph%20Schacherer_Fig1_HTML-370dcb0858d3dd5fb3979143d4a8501b.jpg",
+  "media/packs/images/CRISPY.svg": "/packs-test/media/packs/images/CRISPY-fa1ea6793d37fabf2d8c68baea69739d.svg",
+  "media/packs/images/GLBRC_165strains.jpg": "/packs-test/media/packs/images/GLBRC_165strains-680a5a789aa2ca0992571a4f169327c7.jpg",
+  "media/packs/images/Joseph Schacherer_Fig1_HTML.jpg": "/packs-test/media/packs/images/Joseph%20Schacherer_Fig1_HTML-370dcb0858d3dd5fb3979143d4a8501b.jpg",
+  "media/packs/images/ecorp.jpg": "/packs-test/media/packs/images/ecorp-a8e286f05ba90f401ca0bae0b3aa1b99.jpg",
+  "media/webfonts/fa-solid-900.eot": "/packs-test/media/webfonts/fa-solid-900-8e4a6dcc.eot",
+  "media/webfonts/fa-solid-900.svg": "/packs-test/media/webfonts/fa-solid-900-c2801fb4.svg",
+  "media/webfonts/fa-solid-900.ttf": "/packs-test/media/webfonts/fa-solid-900-0bff33a5.ttf",
+  "media/webfonts/fa-solid-900.woff": "/packs-test/media/webfonts/fa-solid-900-333bae20.woff",
+  "media/webfonts/fa-solid-900.woff2": "/packs-test/media/webfonts/fa-solid-900-44d537ab.woff2",
+  "offsite_searches.js": "/packs-test/js/offsite_searches-191fc9f7e7a2fadd67d2.js",
+  "offsite_searches.js.map": "/packs-test/js/offsite_searches-191fc9f7e7a2fadd67d2.js.map",
+  "server_rendering.css": "/packs-test/css/server_rendering-22ac5c90.css",
+  "server_rendering.css.map": "/packs-test/css/server_rendering-22ac5c90.css.map",
+  "server_rendering.js": "/packs-test/js/server_rendering-9a1ca531a7d7965d8d0b.js",
+  "server_rendering.js.map": "/packs-test/js/server_rendering-9a1ca531a7d7965d8d0b.js.map"
+}

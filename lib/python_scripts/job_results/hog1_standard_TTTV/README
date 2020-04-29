@@ -1,0 +1,5 @@
+Command that generated this data
+
+python lib/python_scripts/crispy.py -g hog1 -n S288C -p TTTV -c
+
+

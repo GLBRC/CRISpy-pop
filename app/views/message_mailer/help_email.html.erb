@@ -1,0 +1,5 @@
+Message from <%= @message.name || 'a user' %>
+<hr>
+<%= simple_format @message.content %>
+<br>
+Reply to: <%= @message.email %>

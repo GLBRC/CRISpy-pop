@@ -1,0 +1,31 @@
+<% content_for :pagetitle do %>
+  Role: <%= @role.name %>
+<% end %>
+
+<% content_for :item_bar do %>
+  <div class="text-right">
+    <%= link_to 'Edit', edit_role_path(@role), class: 'btn btn-secondary' %>
+    <%= link_to 'Cancel', roles_path, class: 'btn btn-secondary' %>
+  </div>
+<% end %>
+<div class='row'>
+  <div class='col-md-5'>
+    <div class='card'>
+      <div class='card-header'>Attributes</div>
+      <div class='card-body'>
+        <p>
+          <strong>Name:</strong>
+          <%= @role.name %>
+        </p>
+        <p>
+          <strong>Created At:</strong>
+          <%= @role.created_at.strftime('%D %I:%M %p') %>
+        </p>
+        <p>
+          <strong>Updated At:</strong>
+          <%= @role.updated_at.strftime('%D %I:%M %p') %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

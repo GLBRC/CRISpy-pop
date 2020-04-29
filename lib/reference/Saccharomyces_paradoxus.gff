@@ -1,0 +1,57 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+#!genome-build ASM207905v1
+#!genome-build-accession NCBI_Assembly:GCA_002079055.1
+##sequence-region CP020242.1 1 235665
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+I	Genbank	region	1	235665	.	+	.	ID=id0;Dbxref=taxon:27291;Name=I;chromosome=I;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020243.1 1 835812
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+II	Genbank	region	1	835812	.	+	.	ID=id1;Dbxref=taxon:27291;Name=II;chromosome=II;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020244.1 1 357685
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+III	Genbank	region	1	357685	.	+	.	ID=id2;Dbxref=taxon:27291;Name=III;chromosome=III;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020245.1 1 1477988
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+IV	Genbank	region	1	1477988	.	+	.	ID=id3;Dbxref=taxon:27291;Name=IV;chromosome=IV;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020246.1 1 565208
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+V	Genbank	region	1	565208	.	+	.	ID=id4;Dbxref=taxon:27291;Name=V;chromosome=V;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020247.1 1 296034
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+VI	Genbank	region	1	296034	.	+	.	ID=id5;Dbxref=taxon:27291;Name=VI;chromosome=VI;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020248.1 1 1119193
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+VII	Genbank	region	1	1119193	.	+	.	ID=id6;Dbxref=taxon:27291;Name=VII;chromosome=VII;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020249.1 1 531267
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+VIII	Genbank	region	1	531267	.	+	.	ID=id7;Dbxref=taxon:27291;Name=VIII;chromosome=VIII;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020250.1 1 443128
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+IX	Genbank	region	1	443128	.	+	.	ID=id8;Dbxref=taxon:27291;Name=IX;chromosome=IX;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020251.1 1 743843
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+X	Genbank	region	1	743843	.	+	.	ID=id9;Dbxref=taxon:27291;Name=X;chromosome=X;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020252.1 1 690553
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+XI	Genbank	region	1	690553	.	+	.	ID=id10;Dbxref=taxon:27291;Name=XI;chromosome=XI;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020253.1 1 1023116
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+XII	Genbank	region	1	1023116	.	+	.	ID=id11;Dbxref=taxon:27291;Name=XII;chromosome=XII;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020254.1 1 941477
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+XIII	Genbank	region	1	941477	.	+	.	ID=id12;Dbxref=taxon:27291;Name=XIII;chromosome=XIII;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020255.1 1 778926
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+XIV	Genbank	region	1	778926	.	+	.	ID=id13;Dbxref=taxon:27291;Name=XIV;chromosome=XIV;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020256.1 1 1078405
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+XV	Genbank	region	1	1078405	.	+	.	ID=id14;Dbxref=taxon:27291;Name=XV;chromosome=XV;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020257.1 1 903028
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+XVI	Genbank	region	1	903028	.	+	.	ID=id15;Dbxref=taxon:27291;Name=XVI;chromosome=XVI;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=CBS432
+##sequence-region CP020258.1 1 71482
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=27291
+MT	Genbank	region	1	71482	.	+	.	ID=id16;Dbxref=taxon:27291;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;strain=CBS432
+###

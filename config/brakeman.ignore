@@ -1,0 +1,26 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "c99b88c58479b7784d243993238280350988e444d9e07694ce229c66b22a1434",
+      "check_name": "Redirect",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/users_controller.rb",
+      "line": 32,
+      "link": "https://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to((current_user.admin? ? (users_path) : (User.find(params[:id]))))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "UsersController",
+        "method": "update"
+      },
+      "user_input": "User.find(params[:id])",
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2019-10-15 11:25:42 -0500",
+  "brakeman_version": "4.6.1"
+}

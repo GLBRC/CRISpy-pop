@@ -1,0 +1,137 @@
+@import '~bootstrap/scss/bootstrap';
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import 'dna_spinner';
+
+* {
+  font-size: 15px;
+}
+
+.result-header {
+  text-decoration: underline;
+
+}
+
+.page-header {
+  margin-top: 10px !important;
+
+  #item-bar {
+    @extend .clearfix;
+    margin-top: 10px;
+    a:not(.dropdown-menu a) {
+      margin: 1em 1em 0 0;
+    }
+    .dropdown {
+      display: inline-block;
+    }
+  }
+}
+
+.card-header.panel-custom {
+    background: #1E99E8;
+    color: white;
+}
+
+.tiles .panel {
+  cursor: pointer;
+  transition: box-shadow 200ms;
+  &:hover {
+    box-shadow: 3px 0px 20px rgba(0,0,0, .2);
+  }
+}
+
+.citation {
+  margin: 10px 10px 10px 10px;
+}
+
+#sidebar {
+  min-width: 200px;
+  max-width: 200px;
+  background: #f7f7f7;
+}
+
+#sidebar-container {
+  min-height: 100vh;
+  padding: 0;
+}
+.sidebar-expanded {
+  width: 200px;
+}
+
+/* Menu item*/
+#sidebar-container .list-group a {
+  height: 50px;
+  /* color: white; */
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.list-group-item {
+  content: " \f107";
+  display: inline;
+  text-align: center;
+  padding-left: 10px;
+}
+
+/* for tabbed form */
+.nav-tabs {
+    /* border-bottom: 1px solid #dee2e6;*/
+    margin-bottom: 1em;
+}
+
+.nav-item a.nav-link:hover:not(.active) {
+   background-color: lightgray;
+   color: gray;
+}
+
+
+.nav-item a.nav-link:not(.active) {
+   color: #337ab7;
+   cursor: pointer;
+}
+
+div.hg-checkbox {
+  margin-top: 35px;
+}
+
+
+/* flash */
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.geneLengthNotice {
+  margin-left: 5px;
+  font-size: 12px;
+  color: grey;
+}

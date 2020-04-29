@@ -1,0 +1,2 @@
+track name=introns description=YAL030W
+I 87388 87500

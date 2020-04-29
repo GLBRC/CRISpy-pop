@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#feedback_modal">
+  Give Feedback
+</button>
+<div data-backdrop="false" class="modal fade" id="feedback_modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Message GLBRC Helpdesk</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= bootstrap_form_for(Message.new) do |f| %>
+        <div class="modal-body">
+          <%= f.text_field :name, label: 'Sender', value: 'CRISpy-pop User' %>
+          <%= f.email_field :email, label: 'Contact', value: 'no-reply@glbrc.org' %>
+          <%= f.text_area :content, placeholder: 'Your Message', label: 'Message'%>
+          <%= f.hidden_field :current_page, value: request.original_url, id: 'help-current-page'%>
+        </div>
+        <div class="modal-footer">
+          <%= f.submit 'Send Message', class: 'btn btn-success', data: {toggle: 'modal', target: '#need-help-modal'} %>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

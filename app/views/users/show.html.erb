@@ -1,0 +1,60 @@
+<% content_for :pagetitle do %>
+  <%= "User Profile for #{@user.username}" %>
+<% end %>
+
+<% content_for :item_bar do %>
+  <%= link_to 'Cancel', users_path, class: 'btn btn-secondary float-right' %>
+<% end %>
+
+<div class='row'>
+  <div class='col-sm-5'>
+    <div class="card">
+      <div class='card-header'>User Information</div>
+      <div class='card-body'>
+        <div class='float-left'>
+          <p>
+            <b>Name:</b>
+            <%= @user.display_name %>
+          </p>
+
+          <p>
+            <b>Email:</b>
+            <%= @user.email %>
+          </p>
+
+          <p>
+            <b>Groups:</b>
+            <% @user.groups.each do |group| %>
+              <%= link_to group.name, group %>&nbsp;
+            <% end %>
+          </p>
+          <p>
+            <strong>Roles:</strong>
+            <%= @user.roles.pluck(:name).join(', ') %>
+          </p>
+        </div>
+      </div>
+    </div> <!-- End panel -->
+  </div>  <!-- End column -->
+  <div class='col-sm-7'>
+    <div class="card">
+      <div class='card-header'>Activity</div>
+      <div class='card-body'>
+        <div class='float-left'>
+          <p>
+            <b>Number of sign-ins:</b>
+            <%= @user.sign_in_count %>
+          </p>
+          <p>
+            <b>Current sign-in time:</b>
+            <%= @user.current_sign_in_at.to_formatted_s(:db) if @user.current_sign_in_at.present? %>
+          </p>
+          <p>
+            <b>Last sign-in time:</b>
+            <%= @user.last_sign_in_at.to_formatted_s(:db) if @user.last_sign_in_at.present? %>
+          </p>
+        </div>
+      </div> <!-- End panel body -->
+    </div>  <!-- End panel -->
+  </div>  <!-- End column -->
+</div>  <!-- End Row -->

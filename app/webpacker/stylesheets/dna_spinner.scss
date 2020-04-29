@@ -1,0 +1,68 @@
+$width:8px;
+$n:60;
+$t:3s;
+$z:-20px;
+$gap:0px;
+$c1:rgb(28,208,10);
+$c2:rgb(51,127,255);
+.dna {
+  width: ($width+$gap*2)*$n;
+  margin: 100px auto;
+  perspective: 270px;
+  // transform:rotateZ(90deg);
+  transform-style: preserve-3d;
+  letter-spacing: -5px;
+  &:after {
+    letter-spacing: 5px;
+    display: block;
+    padding-top: 50px;
+    color: #aaa;
+    text-align: center;
+    content: 'Searching...';
+  }
+}
+
+.ele {
+  width: $width;
+  height: $width;
+  display: inline-block;
+  animation: rotate $t linear infinite;
+  transform: rotateX(-360deg) translateZ(0);
+  transform-style: preserve-3d;
+  margin-left: $gap;
+  &:nth-of-type(2n) .dot:before {
+    background: $c2;
+  }
+}
+
+.dot {
+  width: inherit;
+  height: inherit;
+  transform: translateZ($z);
+  transform-style: preserve-3d;
+  &:before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    display: block;
+    background: $c1;
+    border-radius: 50%;
+    animation: rotate $t linear infinite reverse;//reverse
+    transform: rotateX(-360deg) translateZ(0);
+  }
+}
+
+@for $i from 1 through $n {
+  $delay: $t / $n * $i * -2;
+  .ele:nth-of-type(#{$i}),
+  .ele:nth-of-type(#{$i}) .dot:before {
+    animation-delay: $delay;
+  }
+  .ele:nth-of-type(#{$i}):nth-of-type(odd) {
+    animation-delay: $delay - ($t * .5);
+  }
+}
+
+@keyframes rotate {
+  to { transform: none; }
+}

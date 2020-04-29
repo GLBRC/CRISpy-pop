@@ -1,0 +1,25 @@
+<%= content_for :pagetop do %>
+
+<% end %>
+<div class='text-center'>
+  <img src='<%= asset_pack_path "media/packs/images/crispy-pop3.svg" %>' height="35%" width="35%" /><br /><br /><br />
+  <div class="row">
+    <div class="offset-md-1 col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= react_component('CrispySubmissionForm', strains: @strains, genes: @genes, host: @host) %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<br/>
+<div class="dna" id="spinner" style="visibility: hidden;">
+  <% 60.times do %>
+    <div class="ele">
+      <div class="dot">
+      </div>
+    </div>
+  <% end%>
+</div>

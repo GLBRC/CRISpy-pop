@@ -1,0 +1,9 @@
+<% content_for :item_bar do %>
+  <%= link_to 'Cancel', users_path, class: 'btn btn-primary pull-right' %>
+<% end %>
+
+<% content_for :pagetitle do %>
+  New User
+<% end %>
+
+<%= render 'form' %>

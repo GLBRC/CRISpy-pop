@@ -1,0 +1,27 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+#!genome-build ASM215156v1
+#!genome-build-accession NCBI_Assembly:GCA_002151565.1
+##sequence-region CP021239.1 1 1050866
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28985
+A	Genbank	region	1	1050866	.	+	.	ID=id0;Dbxref=taxon:28985;Name=A;chromosome=A;country=USA: Ipswich%2C MA;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=GG799
+##sequence-region CP021240.1 1 1319333
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28985
+B	Genbank	region	1	1319333	.	+	.	ID=id1;Dbxref=taxon:28985;Name=B;chromosome=B;country=USA: Ipswich%2C MA;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=GG799
+##sequence-region CP021241.1 1 1752996
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28985
+C	Genbank	region	1	1752996	.	+	.	ID=id2;Dbxref=taxon:28985;Name=C;chromosome=C;country=USA: Ipswich%2C MA;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=GG799
+##sequence-region CP021242.1 1 1700866
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28985
+D	Genbank	region	1	1700866	.	+	.	ID=id3;Dbxref=taxon:28985;Name=D;chromosome=D;country=USA: Ipswich%2C MA;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=GG799
+##sequence-region CP021243.1 1 2217437
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28985
+E	Genbank	region	1	2217437	.	+	.	ID=id4;Dbxref=taxon:28985;Name=E;chromosome=E;country=USA: Ipswich%2C MA;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=GG799
+##sequence-region CP021244.1 1 2601250
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28985
+F	Genbank	region	1	2601250	.	+	.	ID=id5;Dbxref=taxon:28985;Name=F;chromosome=F;country=USA: Ipswich%2C MA;gbkey=Src;genome=chromosome;mol_type=genomic DNA;strain=GG799
+##sequence-region CP021245.1 1 39914
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=28985
+MT	Genbank	region	1	39914	.	+	.	ID=id6;Dbxref=taxon:28985;Is_circular=true;Name=MT;country=USA: Ipswich%2C MA;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;strain=GG799
+###

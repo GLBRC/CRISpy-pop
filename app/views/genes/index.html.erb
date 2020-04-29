@@ -1,0 +1,28 @@
+<%= content_for :pagetitle do %>
+  <div class="text-center">
+    Genes
+  </div>
+<% end %>
+
+<table class=genes-table style='width: 100%;'>
+  <thead>
+    <tr>
+      <th>Gene Name</th>
+      <th>Genome</th>
+      <th>Chrom</th>
+      <th>Start</th>
+      <th>End</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @genes.each do |g| %>
+      <tr>
+        <td>g.name</td>
+        <td>g.genome</td>
+        <td>g.chrom</td>
+        <td>g.start_pos</td>
+        <td>g.end_pos</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

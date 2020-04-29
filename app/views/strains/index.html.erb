@@ -1,0 +1,64 @@
+<%= content_for :pagetitle do %>
+  Supported Yeast Strains
+<% end %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel">
+      <div class="panel-header">
+        <h3 class="panel-title text-center"> GLBRC Strains (<%= @glbrc_strains.count %>)</h3>
+        <%= link_to '/glbrc_strains', title: 'glbrc_strains_link' do %>
+          <i class="fa fa-lg fa-question-circle pull-right"></i>
+        <% end %>
+      </div>
+      <div class="panel-body">
+        <table class="table" id="glbrc_strains_table">
+          <thead>
+            <tr>
+              <th> Strain Name</th>
+              <th> Description</th>
+              <th> Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @glbrc_strains.each do |s| %>
+              <tr>
+                <td><%= s.name %></td>
+                <td><%= s.description %></td>
+                <td><%= s.created_at %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center"> 1011 Genome Strains (<%= @thousand_genome_strains.count %>)</h3>
+        <%= link_to '/thousand_genome_strains', title: 'thousand_genome_strains_link' do %>
+          <i class="fa fa-lg fa-question-circle pull-right"></i>
+        <% end %>
+      <div class='panel-body'>
+        <table class="table">
+          <thead>
+            <tr>
+              <th> Strain Name</th>
+              <th> Description</th>
+              <th> Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @thousand_genome_strains.each do |s| %>
+              <tr>
+                <td><%= s.name %></td>
+                <td><%= s.description %></td>
+                <td><%= s.created_at %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

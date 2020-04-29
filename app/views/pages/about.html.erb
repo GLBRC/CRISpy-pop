@@ -1,0 +1,36 @@
+<%= content_for :pagetitle do %>
+  <h1> About CRISpy-pop </h1>
+<% end %>
+
+<p style='width: 80%;'>
+  CRISpy-pop is a web application that generates and filters guide RNA sequences for CRISPR/Cas9 genome editing. This tool focuses on generating guide RNA sequences for Yeast and Bacterial species used in bioenergy research. This tool supports a 1011 genome Saccharomyces cerevisiae strain set as well as a 167 strain set of S. cerevisiae isolates
+</p>
+<br />
+<p>
+  <h3>CRISpy-pop utilizes the following open-source software tools:</h3>
+</p>
+<br />
+<br />
+<p>
+  <strong>Cas-OFFinder</strong>
+  <p class='citation'> Bae S., Park J. & Kim J.-S. Cas-OFFinder: A fast and versatile algorithm that searches for potential off-target sites of Cas9 RNA-guided endonucleases. Bioinformatics 30, 1473-1475 (2014).
+  </p>
+</p>
+  <strong>sgRNA Scorer</strong>
+  <p class='citation'> Chari R, Yeo N, Chavez A, Church GM (2017). sgRNA Scorer 2.0 – a species independent model to predict CRISPR/Cas9 activity. ACS Synthetic Biology. Accepted.
+  </p>
+
+<p>
+  <strong>CasFinder</strong>
+  <p class='citation'> Aach J, Mali P, Church GM (2014). CasFinder: Flexible algorithm for identifying specific Cas9 targets in genomes. BioRxiv.
+  </p>
+<br />
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="table-responsive">
+      <%= PandocRuby.convert(File.read(Rails.root.join("CHANGELOG.md")), from: :markdown, to: :html).html_safe %>
+    </div>
+    <br>
+  </div>
+</div>

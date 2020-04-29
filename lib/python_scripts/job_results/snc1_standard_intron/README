@@ -1,0 +1,5 @@
+command used to generate data
+
+python lib/python_scripts/crispy.py -g snc1 -n YLLC17_E5 -c
+
+

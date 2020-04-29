@@ -1,0 +1,19 @@
+
+allenv: &ALLENV
+  enabled: true
+
+production:
+  <<: *ALLENV
+
+development:
+  <<: *ALLENV
+
+test:
+  <<: *ALLENV
+
+oracle_test:
+  <<: *ALLENV
+
+ci:
+  <<: *ALLENV
+
