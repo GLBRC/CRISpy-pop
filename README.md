@@ -5,7 +5,7 @@ CRISpy-pop is a web application that generates and filters guide RNA sequences f
 This application is currently hosted by the Great Lakes Bioenergy Research Center here:
 https://crispy-pop.glbrc.org/
 
-The search by gene feature requires ~7 GB of reference data.  If you would like access to this data, please contact us at https://github.com/orgs/GLBRC/teams/glbrc_github_developers
+The search by gene feature requires ~7 GB of reference data.  If you would like access to this data, please contact us at mailto:helpdesk@energy.wisc.edu?subject=CRISpy-pop%20--%20data%20access%20request&body=re%3A%20https%3A%2F%2Fgithub.com%2FGLBRC%2FCRISpy-pop%2Fblob%2Fmaster%2FREADME.md%0D%0A%0D%0A---%0D%0A%0D%0AHello%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20access%20to%20the%20CRISpy-pop%20reference%20data...%0D%0A%0D%0A
 
 
 ## app-specific prereqs  
@@ -63,5 +63,5 @@ Aach J, Mali P, Church GM (2014). CasFinder: Flexible algorithm for identifying 
 
 ## Contact Info
 
-Please contact us at https://github.com/orgs/GLBRC/teams/glbrc_github_developers
+Please contact us at mailto:helpdesk@energy.wisc.edu?subject=CRISpy-pop%20--%20data%20access%20request&body=re%3A%20https%3A%2F%2Fgithub.com%2FGLBRC%2FCRISpy-pop%2Fblob%2Fmaster%2FREADME.md%0D%0A%0D%0A---%0D%0A%0D%0AHello%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20access%20to%20the%20CRISpy-pop%20reference%20data...%0D%0A%0D%0A
 with bugs or feature requests
