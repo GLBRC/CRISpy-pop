@@ -6,49 +6,49 @@ This application is currently hosted by the Great Lakes Bioenergy Research Cente
 https://crispy-pop.glbrc.org/
 
 
-## app-specific prereqs
+## app-specific prereqs  
 
-ruby / rails
-sqlite3
-yarn
-python3
-pip
+ruby / rails  
+sqlite3  
+yarn  
+python3  
+pip  
 
-### python/pip prereqs
-biopython
-gffutils
-numpy
-scipy
-scikit-learn
+### python/pip prereqs  
+biopython  
+gffutils  
+numpy  
+scipy  
+scikit-learn  
 
-### open source tools
-samtools (1.5)
-bcftools (1.5)
-intel opencl runtime (16.1.1)
-cas-offinder (2.4)
-ncbi-blast (2.7.1+) -- for: blastn
+### open source tools  
+samtools (1.5)  
+bcftools (1.5)  
+intel opencl runtime (16.1.1)  
+cas-offinder (2.4)  
+ncbi-blast (2.7.1+) -- for: blastn  
 
-### environment variables:
-export RAILS_ENV=production
-export crispy_DATABASE=crispy
-export crispy_USERNAME=crispy
-export crispy_PASSWORD=[in-keepass]
-
-
-### Setup Instructions
-1. install all dependencies
-2. clone repository (cd to app directory)
-3. create settings.yml and database.yml files in config/ based on the sample files threre
-4. bundle install
-5. yarn install
-6. rails db:migrate
-7. rails db:seed
-8. rails server
+### environment variables:  
+export RAILS_ENV=production  
+export crispy_DATABASE=crispy  
+export crispy_USERNAME=crispy  
+export crispy_PASSWORD=[in-keepass]  
 
 
-### CRISpy-pop utilizes the following open-source software tools:
+### Setup Instructions  
+1. install all dependencies  
+2. clone repository (cd to app directory)  
+3. create settings.yml and database.yml files in config/ based on the sample files threre  
+4. bundle install  
+5. yarn install  
+6. rails db:migrate  
+7. rails db:seed  
+8. rails server  
 
-## Cas-OFFinder
+
+### CRISpy-pop utilizes the following open-source software tools:  
+
+## Cas-OFFinder  
 
 Bae S., Park J. & Kim J.-S. Cas-OFFinder: A fast and versatile algorithm that searches for potential off-target sites of Cas9 RNA-guided endonucleases. Bioinformatics 30, 1473-1475 (2014).
 
