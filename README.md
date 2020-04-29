@@ -5,6 +5,8 @@ CRISpy-pop is a web application that generates and filters guide RNA sequences f
 This application is currently hosted by the Great Lakes Bioenergy Research Center here:
 https://crispy-pop.glbrc.org/
 
+The search by gene feature requires ~7 GB of reference data.  If you would like access to this data, please contact us at https://github.com/orgs/GLBRC/teams/glbrc_github_developers
+
 
 ## app-specific prereqs  
 
