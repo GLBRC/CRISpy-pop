@@ -1,0 +1,86 @@
+<%= content_for :pagetitle do %>
+  Help
+<% end %>
+
+<h3> Target A Gene</h3>
+<p>
+  This feature is used to generate all potential guide RNA sequences for a selected gene.  The user selects run parameters, runs the program and is presented with a table of scored sgRNA sequences and a genome track view of where the guide RNAs land on the selected gene.
+</p>
+<h4> Instructions:</h4>
+<ul>
+  <li>
+    Select a Strain from the Strain dropdown.  The list of supported genes will change based on the strain selected.
+  </li>
+  <li>
+    Select a Gene to target from the Gene dropdown.
+  </li>
+  <li>
+    Optionally select a PAM sequence to target
+  </li>
+  <li>
+    Optionally select a Target Type from the Target Type dropdown.  This will change depending on what is supported based on the selected strain.
+  </li>
+  <li>
+    Optionally select a spacer length.  This defaults to 20.
+  </li>
+</ul>
+<p>
+  *** If the genomic track doesn't center on the correct gene, click one of the green Go buttons
+  <br />
+  *** to center the view on a specific guide RNA.  IGV viewer has some quirks about coordinate formatting,
+  <br />
+  *** sometimes having to do with targets on extreme ends of chromosomes.
+</p>
+
+<h3> Search for off target hits</h3>
+<p>
+  This feature is used to search a guide RNA sequence against a reference genome to see if any off target hits are predicted.
+
+  <h4> Instructions:</h4>
+  <ul>
+    <li>
+      Paste a sgRNA sequence into the text field.  This requires that the PAM sequence be present.
+    </li>
+    <li>
+      Select the PAM sequence used.
+    </li>
+    <li>
+      Select the reference genome with which to search for off target hits.
+    </li>
+  </ul>
+</p>
+
+
+<h3>Target a custom sequence</h3>
+<p>
+  This feature is used to generate guide RNA sequences for a User supplied sequence.  This feature can also search for off target hits in the context of a selected genome.  If no genome is selected, no off target searching is performed.
+
+  <h4>Instructions:</h4>
+  <ul>
+    <li>
+      Paste a custom sequence target into the text field. This does not support sequences with ambiguity codes or other formatting, only ATCG's are permitted.  Remove any header lines as well.
+    </li>
+    <li>
+      Optional: Select the PAM sequence or define desired spacer length.
+    </li>
+    <li>
+      Optional: Select the reference genome with which to search for off target hits.
+    </li>
+  </ul>
+</p>
+
+<h3>Known Issues:</h3>
+<p>
+  The IGV browser creates indexed files of the gene tracks, and this can result in updated gene tracks not being displayed properly.
+
+  <br />
+  If gene tracks do not display gene strand orientation, try clearing your browser's cache.  On Chrome this is done by:
+  <ul>
+    <li>
+      Settings -> Advanced - > Privacy and Security
+    </li>
+    <li>
+      Clear browsing data -> Cached images & files
+    </li>
+  </ul>
+</p>

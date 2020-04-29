@@ -1,0 +1,23 @@
+<% content_for :pagetitle do %>
+  Groups
+<% end %>
+
+<div class='table-responsive'>
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Members</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%@groups.each do |group| %>
+        <tr>
+          <td><%= link_to group.name, group %></td>
+          <td><%= group.members.count %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

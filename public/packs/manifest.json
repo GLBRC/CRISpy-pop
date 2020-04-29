@@ -1,0 +1,92 @@
+{
+  "application.css": "/packs/css/application-9b797800.css",
+  "application.css.map": "/packs/css/application-9b797800.css.map",
+  "application.js": "/packs/js/application-2bb5f00197bd9f95195e.js",
+  "application.js.map": "/packs/js/application-2bb5f00197bd9f95195e.js.map",
+  "entrypoints": {
+    "application": {
+      "css": [
+        "/packs/css/application-9b797800.css"
+      ],
+      "js": [
+        "/packs/js/application-2bb5f00197bd9f95195e.js"
+      ],
+      "css.map": [
+        "/packs/css/application-9b797800.css.map"
+      ],
+      "js.map": [
+        "/packs/js/application-2bb5f00197bd9f95195e.js.map"
+      ]
+    },
+    "images/crispy-pop3": {
+      "js": [
+        "/packs/js/images/crispy-pop3-e4e20f5cd011b77e6556.js"
+      ],
+      "js.map": [
+        "/packs/js/images/crispy-pop3-e4e20f5cd011b77e6556.js.map"
+      ]
+    },
+    "images/GLBRC_165strains": {
+      "js": [
+        "/packs/js/images/GLBRC_165strains-c84e07eb6e10d5219a1d.js"
+      ],
+      "js.map": [
+        "/packs/js/images/GLBRC_165strains-c84e07eb6e10d5219a1d.js.map"
+      ]
+    },
+    "images/Joseph Schacherer_Fig1_HTML": {
+      "js": [
+        "/packs/js/images/Joseph%20Schacherer_Fig1_HTML-22f87e8c8ae183d65c19.js"
+      ],
+      "js.map": [
+        "/packs/js/images/Joseph%20Schacherer_Fig1_HTML-22f87e8c8ae183d65c19.js.map"
+      ]
+    },
+    "offsite_searches": {
+      "js": [
+        "/packs/js/offsite_searches-c5ae468f255d1851d94a.js"
+      ],
+      "js.map": [
+        "/packs/js/offsite_searches-c5ae468f255d1851d94a.js.map"
+      ]
+    },
+    "server_rendering": {
+      "css": [
+        "/packs/css/server_rendering-22ac5c90.css"
+      ],
+      "js": [
+        "/packs/js/server_rendering-308cf6b0bb50b62595a8.js"
+      ],
+      "css.map": [
+        "/packs/css/server_rendering-22ac5c90.css.map"
+      ],
+      "js.map": [
+        "/packs/js/server_rendering-308cf6b0bb50b62595a8.js.map"
+      ]
+    }
+  },
+  "images/GLBRC_165strains.js": "/packs/js/images/GLBRC_165strains-c84e07eb6e10d5219a1d.js",
+  "images/GLBRC_165strains.js.map": "/packs/js/images/GLBRC_165strains-c84e07eb6e10d5219a1d.js.map",
+  "images/Joseph Schacherer_Fig1_HTML.js": "/packs/js/images/Joseph%20Schacherer_Fig1_HTML-22f87e8c8ae183d65c19.js",
+  "images/Joseph Schacherer_Fig1_HTML.js.map": "/packs/js/images/Joseph%20Schacherer_Fig1_HTML-22f87e8c8ae183d65c19.js.map",
+  "images/crispy-pop3.js": "/packs/js/images/crispy-pop3-e4e20f5cd011b77e6556.js",
+  "images/crispy-pop3.js.map": "/packs/js/images/crispy-pop3-e4e20f5cd011b77e6556.js.map",
+  "media/images/CRISPY.svg": "/packs/media/images/CRISPY-fa1ea6793d37fabf2d8c68baea69739d.svg",
+  "media/images/GLBRC_165strains.jpg": "/packs/media/images/GLBRC_165strains-680a5a789aa2ca0992571a4f169327c7.jpg",
+  "media/images/Joseph Schacherer_Fig1_HTML.jpg": "/packs/media/images/Joseph%20Schacherer_Fig1_HTML-370dcb0858d3dd5fb3979143d4a8501b.jpg",
+  "media/images/crispy-pop.svg": "/packs/media/images/crispy-pop-d2ab258e15f1337181cd59f15e9aee05.svg",
+  "media/packs/images/GLBRC_165strains.jpg": "/packs/media/packs/images/GLBRC_165strains-680a5a789aa2ca0992571a4f169327c7.jpg",
+  "media/packs/images/Joseph Schacherer_Fig1_HTML.jpg": "/packs/media/packs/images/Joseph%20Schacherer_Fig1_HTML-370dcb0858d3dd5fb3979143d4a8501b.jpg",
+  "media/packs/images/crispy-pop3.svg": "/packs/media/packs/images/crispy-pop3-2387a65b6ecd9ad936905a6d3cff01ba.svg",
+  "media/webfonts/fa-solid-900.eot": "/packs/media/webfonts/fa-solid-900-8e4a6dcc.eot",
+  "media/webfonts/fa-solid-900.svg": "/packs/media/webfonts/fa-solid-900-c2801fb4.svg",
+  "media/webfonts/fa-solid-900.ttf": "/packs/media/webfonts/fa-solid-900-0bff33a5.ttf",
+  "media/webfonts/fa-solid-900.woff": "/packs/media/webfonts/fa-solid-900-333bae20.woff",
+  "media/webfonts/fa-solid-900.woff2": "/packs/media/webfonts/fa-solid-900-44d537ab.woff2",
+  "offsite_searches.js": "/packs/js/offsite_searches-c5ae468f255d1851d94a.js",
+  "offsite_searches.js.map": "/packs/js/offsite_searches-c5ae468f255d1851d94a.js.map",
+  "server_rendering.css": "/packs/css/server_rendering-22ac5c90.css",
+  "server_rendering.css.map": "/packs/css/server_rendering-22ac5c90.css.map",
+  "server_rendering.js": "/packs/js/server_rendering-308cf6b0bb50b62595a8.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-308cf6b0bb50b62595a8.js.map"
+}

@@ -1,0 +1,31 @@
+<div class='container-fluid'>
+  <div class="navbar-header"><a class="navbar-brand" href="/">
+    CRISpy-pop</a>
+  </div>
+  <div id="header_links" class="collapse navbar-collapse" style="width: 200px;">
+    <ul class="navbar-nav mr-auto">
+      <li>
+        <a href='<%= strains_path %>' style="color: #8d9ba3">
+          <i class="fa fa-bug fa-lg fa-fw ml-5" style="color: #8d9ba3"></i>
+          Strains
+        </a>
+      </li>
+      <li>
+        <a href='about' style="color: #8d9ba3">
+          <i class="fa fa-question-circle fa-lg fa-fw ml-3" style="color: #8d9ba3"></i>
+          About
+        </a>
+      </li>
+      <li>
+        <a href='help' style="color: #8d9ba3">
+          <i class="fa fa-ambulance fa-lg fa-fw ml-3" style="color: #8d9ba3"></i>
+          Help
+        </a>
+      </li>
+    </ul>
+  </div>
+  <ul class="nav navbar-right">
+    <%= render "layouts/feedback" %>
+  </ul>
+
+</div>

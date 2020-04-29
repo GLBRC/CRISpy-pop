@@ -1,0 +1,112 @@
+<div class="row">
+  <div class="col-md-12" id="results">
+    <%= bootstrap_form_tag(url: checked_result_url, method: :post, :html => {:id => "export_form"}) do |f| %>
+      <%= hidden_field_tag(:format, 'csv') %>
+      <%= hidden_field_tag(:pam, @pam) %>
+      <%= hidden_field_tag(:target_name, 'gene') %>
+      <div class="float-right">
+        <button class="btn btn-secondary" id="select_all_btn">Select All</button>
+        <%= f.submit 'Export', id: 'export_btn', data: { disable_with: false }, class: 'btn btn-success' %>
+      </div>
+      <br/>
+      Click on Column headers to sort
+      <table class="table">
+        <thead>
+          <tr id="head_row" style="background-color: #1E99E8; color: white; border-radius: 10px;">
+            <th style="border-radius: 5px 0 0 0px;">Name</th>
+            <th>sgRNA Sequence</th>
+            <th>PAM Site</th>
+            <th>Go To</th>
+            <th class="result-header">
+              <%= sortable "perc_activity", "Percent Activity" %>
+            </th>
+            <th class="result-header">
+              <%= sortable "gc", "GC%" %>
+            </th>
+            <th class="result-header">
+              <%= sortable "chrom", "Chromosome" %>
+            </th>
+            <th class="result-header">
+              <%= sortable "pos", "Position" %>
+            </th>
+            <th class="result-header">
+              <%= sortable "pos_in_gene", "Position In Gene" %>
+            </th>
+            <th>Strand</th>
+            <th class="result-header">
+              <%= sortable "num_mis_matches", "Num Mismatches" %>
+            </th>
+            <th class="result-header">
+              <%= sortable "num_off_site_match", "Off-Site Matches" %>
+            </th>
+            <th class="result-header">
+              <%= sortable "has_human_hit", "Human Hits?" if @submission.search_human_genome %>
+            </th>
+            <th class="result-header">
+              <%= sortable  "strains_covered", "Strains Covered" %>
+            </th>
+            <th style="border-radius: 0 5px 0px 0;"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @results.each do |result| %>
+            <tr class="result_row" id="<%= result.name %>">
+              <td>
+                <%= link_to result.name, result, class: "btn btn-outline-dark" %>
+              </td>
+              <% if result.state == 'Used' %>
+                <td style="background-color: MediumSeaGreen; color: white;">
+                  <%= result.sgrna_sequence[0...-@pam.length] %>
+                </td>
+              <% else %>
+                <td>
+                  <%= result.sgrna_sequence[0...-@pam.length] %>
+                </td>
+              <% end %>
+              <td>
+                <%= result.sgrna_sequence.last(@pam.length) %>
+              </td>
+              <td>
+                <button chrom="<%= result.chrom %>" class="zoomBtn btn btn-success" length="<%= result.sgrna_sequence.length %>" pos="<%= result.pos %>">Go</button>
+              </td>
+              <td>
+                <%= result.perc_activity %>
+              </td>
+              <td>
+                <%= result.gc %>
+              </td>
+              <td>
+                <%= result.chrom %>
+              </td>
+              <td>
+                <%= result.pos %>
+              </td>
+              <td>
+                <%= result.pos_in_gene %>
+              </td>
+              <td>
+                <%= result.strand %>
+              </td>
+              <td>
+                <%= result.num_mis_matches %>
+              </td>
+              <td class="offsite_cnt">
+                <%= result.num_off_site_match %>
+              </td>
+              <td>
+                <%= result.has_human_hit? ? 'Yes' : 'No' if @submission.search_human_genome %>
+              </td>
+              <td>
+                <%= link_to count_coverage(result.strain_coverage, @submission.strain), result %>
+              </td>
+              <td>
+                <%= check_box_tag 'checked_ids[]', result.id, false, :id => 'checked' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>
+<div id="task-form" style="display:none;"></div>

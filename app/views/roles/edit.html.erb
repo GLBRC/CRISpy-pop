@@ -1,0 +1,11 @@
+<% content_for :pagetitle do %>
+  Editing Role: <%= @role.name %>
+<% end %>
+
+<% content_for :item_bar do %>
+  <div class = "text-right">
+    <%= link_to 'Cancel', roles_path, class: 'btn btn-secondary' %>
+  </div>
+<% end %>
+<br/><br/>
+<%= render 'form' %>

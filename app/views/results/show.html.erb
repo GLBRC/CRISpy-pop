@@ -1,0 +1,86 @@
+<%= content_for :pagetitle do %>
+  Result <%= @result.id %>
+<% end %>
+
+<div class="row">
+  <% unless @result.chrom == 'ZM4' %>
+    <div class="col-md-6">
+      <div class="card card-info">
+        <div class="card-header panel-custom">
+          <div class="text-center">Strain Coverage</div>
+        </div>
+        <div class="card-body">
+          <table class="strains-table" style='width: 100%;'>
+            <thead>
+              <tr class="head_row" style='background-color: #968B89; color: white; border-radius: 10px;'>
+                <th>Strains Covered</th>
+                <th>Not Covered</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @list.each do |covered, not_covered| %>
+                <tr>
+                  <td><%= covered %></td>
+                  <td><%= not_covered %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="col-md-6">
+    <div class="card card-info">
+      <div class="card-header panel-custom">
+        <div class="text-center">Guide RNA Details</div>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>Name: </strong>
+          <%= @result.name %>
+        </p>
+        <p>
+          <strong>Sequence: </strong>
+          <%= @result.sgrna_sequence %>
+        </p>
+        <p>
+          <strong>Status: </strong>
+          <%= @result.state.nil? ? 'Not Used' : @result.state %>
+        </p>
+        <p>
+          <strong>GC Percent: </strong>
+          <%= @result.gc %>
+        </p>
+        <p>
+          <strong>Percent Activity: </strong>
+          <%= @result.perc_activity %>
+        </p>
+        <p>
+          <strong>Chromosome: </strong>
+          <%= @result.chrom %>
+        </p>
+        <p>
+          <strong>Mismatches: </strong>
+          <%= @result.num_mis_matches %>
+        </p>
+        <p>
+          <strong>Off Site Matches: </strong>
+          <%= @result.num_off_site_match %>
+        </p>
+        <p>
+          <strong>Mismatch Sequence</strong>
+          <%= @result.mismatch_seq %>
+        </p>
+      </div>
+    </div><br /><br />
+    <div class="card card-info">
+      <div class="card-header panel-custom">
+        <div class="text-center">Alignment</div>
+      </div>
+      <div class="card-body">
+        <%= render 'alignment' %>
+      </div>
+    </div>
+  </div>
+</div>

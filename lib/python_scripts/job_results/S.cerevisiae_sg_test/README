@@ -1,0 +1,8 @@
+command used to generate data
+
+This is for gene AAD3
+
+
+python lib/python_scripts/crispy.py  -sg AAAAAGCAATGGAGGAACGG
+
+

@@ -1,0 +1,31 @@
+<% content_for :pagetitle do %>
+  Users
+<% end %>
+
+<% content_for :item_bar do %>
+<% end %>
+
+<div class="table-responsive">
+  <table id="users" class="table table-striped" width="100%">
+    <thead>
+      <th>Name</th>
+      <th>E-mail</th>
+      <th>Roles</th>
+      <th>Last Login</th>
+      <th>Last Time</th>
+      <th>&nbsp;</th>
+    </thead>
+    <tbody>
+      <% for user in @users %>
+        <tr>
+          <td><%= link_to user.display_name, user_path(user) %></td>
+          <td><%= user.email %></td>
+          <td><%= user.roles.pluck(:name).join(', ') %></td>
+          <td><%= user.current_sign_in_at.localtime.strftime('%D %I:%M %p') if user.current_sign_in_at %></td>
+          <td><%= distance_of_time_in_words(user.current_sign_in_at, Time.now) if user.current_sign_in_at %></td>
+          <td><%= link_to fa_icon("edit lg"), edit_user_path(user) if policy(user).edit? %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

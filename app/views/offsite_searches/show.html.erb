@@ -1,0 +1,66 @@
+<% content_for :pagetitle do %>
+  <%= "Off Site Search: #{@offsite_search.id}" %>
+<% end %>
+<% if @offsite_hits.empty? %>
+  <h3>No Hits Found</h3>
+<% else %>
+  <div class="row"></div>
+  <div class="col-md-7">
+    <div class="panel panel-info" id="browse_frame" style="width: 1350px; height: 475px;">
+      <div class="panel-heading panel-custom">
+        <h3 class="panel-title text-center">Genome Viewer</h3>
+      </div>
+      <div class="panel-body">
+        <div id="browser" style="max-height: 400px; overflow-y: scroll;"></div>
+      </div>
+    </div>
+  </div>
+  <table class="table" id="hits" style="width: 1350px;">
+    <thead>
+      <tr id="head_row" style="background-color: #1E99E8; color: white; border-radius: 10px;">
+        <th style="border-radius: 5px 0 0 0px;">Name</th>
+        <th>sgRNA Sequence</th>
+        <th>Go To</th>
+        <th>Chrom</th>
+        <th>Position</th>
+        <th>Strand</th>
+        <th style="border-radius: 0 5px 0px 0;">Mismatches</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @offsite_hits.each do |hit| %>
+        <tr>
+          <td>
+            <%= hit.name %>
+          </td>
+          <td>
+            <%= hit.sgrna_sequence %>
+          </td>
+          <td>
+            <button class="btn btn-success zoomButton" pos="<%= hit.pos %>" chrom="<%= hit.chrom %>">Go</button>
+          </td>
+          <td>
+            <%= hit.chrom %>
+          </td>
+          <td>
+            <%= hit.pos %>
+          </td>
+          <td>
+            <%= hit.strand %>
+          </td>
+          <td>
+            <%= hit.mismatches %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+<script>
+  var genome = '<%= @offsite_search.genome %>';
+  var sgrnaLength = '<%= @sgrna_length %>';
+  var chromStart = '<%= @chrom_start %>';
+  var locusStart = '<%= @locus_start %>';
+  var locusEnd = '<%= @locus_end %>';
+</script>
+<%= javascript_pack_tag 'offsite_searches' %>

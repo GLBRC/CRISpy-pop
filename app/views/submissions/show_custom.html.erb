@@ -1,0 +1,219 @@
+<% content_for :pagetitle do %>
+  <%= "Custom Target Run Submission: #{@custom_submission.id}" %>
+  <ul>
+    <li>
+      <%= "Sequence Target Length: #{@custom_submission.sequence.length},  Spacer Length: #{@custom_submission.spacer_length}" %>
+    </li>
+    <li>
+      <%= "Target Name: #{@custom_submission.target_name}" %>
+    </li>
+  </ul>
+<% end %>
+
+<% content_for :itembar do %>
+  <%= link_to 'Back to Custom Target Submission', new_submission_path(active: 'target_custom_seq'), class: 'btn btn-primary' %>
+<% end %>
+<% if @results.empty? %>
+  <h3>
+    <%= "No Guide RNA sites found within supplied sequence part of genome reference #{@custom_submission.genome}" %>
+  </h3>
+<% else %>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="panel panel-info" id="browse_frame" style="width: 1350px; height: 475px;">
+        <div class="panel-heading panel-custom">
+          <h3 class="panel-title text-center">Genome Viewer</h3>
+        </div>
+        <div class="panel-body">
+          <div id="browser" style="max-height: 400px; overflow-y: scroll;"></div>
+          <%= form_tag ((defined? search_path) ? search_path : {}), {method: :get, class: 'form-inline search'} do %>
+            <%= hidden_field_tag :direction, params[:direction] %>
+            <%= hidden_field_tag :sort, params[:sort] %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+Click on Column headers to sort
+<div class="row">
+  <div class="col-md-7" id="results" style="width: 1375px;">
+    <%= bootstrap_form_tag(url: checked_result_url, method: :post, :html => {:id => "export_form"}) do |f| %>
+      <%= hidden_field_tag(:format, 'csv') %>
+      <%= hidden_field_tag(:pam, @pam) %>
+      <%= hidden_field_tag(:target_name, @custom_submission.target_name) %>
+      <div class="pull-right">
+        <%= link_to 'Select All', '#', class: 'btn btn-default', id: 'select_all_btn' %>
+        <%= f.submit 'Export', id: 'export_btn', data: { disable_with: false }, class: 'btn btn-success' %>
+      </div>
+      <br/>
+      <br/>
+      <table class="table" id="results">
+        <thead>
+          <tr id="head_row" style="background-color: #1E99E8; color: white; border-radius: 10px;">
+            <th style="border-radius: 5px 0 0 0px;">Name</th>
+            <th>sgRNA Sequence</th>
+            <th>PAM Site</th>
+            <th>Go To</th>
+            <th>
+              <%= sortable "perc_activity",  "Percent Activity" %>
+            </th>
+            <th>
+              <%= sortable "gc", "GC%" %>
+            </th>
+            <% unless @genome == 'None' %>
+              <th>
+                <%= sortable "chrom", "Chromosome" %>
+              </th>
+              <th>
+                <%= sortable "pos", "Position" %>
+              </th>
+            <% end %>
+            <th>
+              <%= sortable "pos_in_gene","Position In Sequence" %>
+            </th>
+            <th>Strand</th>
+            <% unless @genome == 'None' %>
+              <th>
+                <%= sortable "num_off_site_match", "Off-Site Matches" %>
+              </th>
+            <% end %>
+            <th style="border-radius: 0 5px 0px 0;"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @results.each do |result| %>
+            <tr class="result_row" id="<%= result.name %>">
+              <td>
+                <%= "#{@custom_submission.target_name}:#{result.name}" %>
+              </td>
+              <% if result.state == 'Used' %>
+                <td style="background-color: MediumSeaGreen; color: white;">
+                  <%= result.sgrna_sequence[0...-@pam.length] %>
+                </td>
+              <% else %>
+                <td>
+                  <%= result.sgrna_sequence[0...-@pam.length] %>
+                </td>
+              <% end %>
+              <td>
+                <%= result.sgrna_sequence.last(@pam.length) %>
+              </td>
+              <td>
+                <button class="btn btn-success" onclick="zoomViewer(<%= result.pos_in_gene %>);">Go</button>
+              </td>
+              <td>
+                <%= result.perc_activity %>
+              </td>
+              <td>
+                <%= result.gc %>
+              </td>
+              <% unless result.chrom.nil? %>
+                <td>
+                  <%= result.chrom %>
+                </td>
+              <% end %>
+              <% unless result.pos.nil? %>
+                <td>
+                  <%= result.pos %>
+                </td>
+              <% end %>
+              <td>
+                <%= result.pos_in_gene %>
+              </td>
+              <td>
+                <%= result.strand %>
+              </td>
+              <% unless @genome == 'None' %>
+                <td class="offsite_cnt">
+                  <%= result.num_off_site_match %>
+                </td>
+              <% end %>
+              <td>
+                <%= check_box_tag 'checked_ids[]', result.id, false %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>
+<div id="task-form" style="display:none;"></div>
+<script>
+
+
+  $('#select_all_btn').click( function() {
+    selectAll();
+  });
+
+  var toggleAll = false;
+
+  function selectAll() {
+   $('input[name="checked_ids[]"]').each(function(){
+      if(toggleAll == true) {
+        $(this).prop('checked', false);
+      }
+      else {
+        $(this).prop('checked', true);
+      }
+   });
+   toggleAll = !toggleAll;
+  }
+
+  $('#export_btn').click( function () {
+    function reload(){
+      document.getElementById("export_form").reset();
+    };
+    window.setTimeout( reload, 10 );
+
+  });
+
+  //highlight instances of offsite hits predicted
+  $('.offsite_cnt').each(function() {
+    if (parseInt($(this).text()) > 0) {
+        $(this).css("background-color","red");
+    }
+  });
+
+  var div = $("#browser")[0];
+
+  fastaURL = "/custom.fasta";
+  genesBed = null;
+  geneTrackName = null;
+
+  options = {
+        palette: ["#00A0B0", "#6A4A3C", "#CC333F", "#EB6841"],
+        locus: "#{@chrom_start}:#{@locus_start}-#{@locus_end}",
+
+        reference: {
+            id: "Custom Target",
+            fastaURL: fastaURL
+        },
+        tracks: [
+            {
+                name: "Generated sgRNAs Forward Strand",
+                url: "/generated_sgrna_coords_pos.bed",
+                displayMode: "EXPANDED"
+            },
+            {
+                name: "Generated sgRNAs Reverse Strand",
+                url: "/generated_sgrna_coords_neg.bed",
+                color: "purple",
+                displayMode: "EXPANDED"
+            }]
+          };
+
+  browser = igv.createBrowser(div, options);
+
+  function zoomViewer(position) {
+    startCoord = parseInt(position) - 10;
+    len = parseInt("#{@sgrna_length}");
+    endCoord = parseInt(position) + len + 10;
+    locusString = "#{@chrom_start}:" + startCoord + "-" + endCoord;
+    igv.browser.search(locusString)
+    $("html, body").animate({ scrollTop: 0 }, "medium");
+  }
+
+</script>

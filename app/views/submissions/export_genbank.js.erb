@@ -1,0 +1,10 @@
+var selecteditems = [];
+
+$("#results").find("input:checked").each(function (i, ob) {
+  selecteditems.push($(ob).val());
+});
+console.log(selecteditems);
+
+let path = '/submissions/' + "<%= @submission.id %>" + '/export_csv.text?selected_ids=' + selecteditems.join(',')
+console.log(path);
+window.open(path, "_top");

@@ -1,0 +1,30 @@
+# Add required keys to config/initializers/app_settings.rb#20
+production:
+  site_name: <%= ENV['crispy_public_SITE_NAME'] %>
+  site_description: Public CRISpy-pop Site
+  host: <%= ENV['crispy_public_HOST'] %>
+  service_desk_email: example@email.com
+
+ci:
+  site_name: CRISpy-pop - CI Test
+  site_description: Public CRISpy-pop Site
+  host: http://localhost:3000
+  service_desk_email: example@email.com
+
+development:
+  site_name: CRISpy-pop - Development
+  site_description: CRISpy-pop Dev Site
+  host: http://localhost:3000
+  service_desk_email: example@email.com
+
+test:
+  site_name: CRISpy-pop - Test
+  site_description: Public CRISpy-pop Site
+  host: http://localhost:60655
+  service_desk_email: example@email.com
+
+oracle_test:
+  site_name: CRISpy-pop - Oracle Test
+  site_description: Public CRISpy-pop Site
+  host: http://localhost:<%= 60655 + ENV['TEST_ENV_NUMBER'].to_i %>
+  service_desk_email: example@email.com

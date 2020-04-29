@@ -1,0 +1,24 @@
+<% content_for :pagetitle do %>
+  <%= "Run Submission: #{@submission.id}" %>
+  <ul>
+    <li>
+      <%= "Gene: #{@gene.name}, Strain: #{@strain.name}, Spacer Length: #{@submission.spacer_length}, Strain Set: #{@strain.strain_set}" if @chrom_types.include?(@submission.submission_type) %>
+      <%= "Custom Target: #{@submission.target_name}" if @submission.submission_type == 'custom' %>
+    </li>
+  </ul>
+<% end %>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-info" id="browse_frame" style="width: 1610px; height: 475px;">
+      <div class="panel-heading panel-custom">
+        <h3 class="panel-title text-center">Genome Viewer</h3>
+      </div>
+      <div class="panel-body">
+        <% strain_name = @chrom_types.include?(@submission.submission_type) ? @strain.name : 'CUSTOM' %>
+        <% target_name = @chrom_types.include?(@submission.submission_type) ? 'gene' : 'CUSTOM' %>
+        <%= react_component('SubmissionShow', host: APP_CONFIG[:host], strainName: strain_name, chromStart: @chrom_start, locusStart: @locus_start.to_s, locusEnd: @locus_end.to_s, results: @submission.results, spacerLength: @submission.spacer_length, allStrainsCount: @all_strains_count, pam: @submission.pam_sequence, targetName: target_name) %>
+      </div>
+    </div>
+  </div>
+</div>
