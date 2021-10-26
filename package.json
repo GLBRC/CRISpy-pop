@@ -13,7 +13,7 @@
     "classnames": "^2.2.6",
     "eslint-import-resolver-webpack": "^0.11.1",
     "jquery": "^3.4.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.0",
     "jquery.kinetic": "^2.2.4",
     "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",
